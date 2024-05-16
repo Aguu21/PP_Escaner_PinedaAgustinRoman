@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "21L7NA4XQzWVYz0ealv9Yo0m1EFTSyuun5Wqu/6IvhFxdGVh1rUzsvultxMLaDZ3eTIMzNdhoUdmRO25Ptyk0w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\crisedu10\\source\\repos\\UTN\\PP_Escaner_PinedaAgustinRoman\\Entidades\\Entidades.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\crisedu10\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.18\\microsoft.windowsdesktop.app.ref.7.0.18.nupkg.sha512",
+    "C:\\Users\\crisedu10\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.18\\microsoft.netcore.app.ref.7.0.18.nupkg.sha512",
+    "C:\\Users\\crisedu10\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.18\\microsoft.aspnetcore.app.ref.7.0.18.nupkg.sha512"
+  ],
+  "logs": []
+}

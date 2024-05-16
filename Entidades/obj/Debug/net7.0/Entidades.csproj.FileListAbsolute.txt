@@ -1,0 +1,11 @@
+C:\Users\crisedu10\source\repos\UTN\PP_Escaner_PinedaAgustinRoman\Entidades\bin\Debug\net7.0\Entidades.deps.json
+C:\Users\crisedu10\source\repos\UTN\PP_Escaner_PinedaAgustinRoman\Entidades\bin\Debug\net7.0\Entidades.dll
+C:\Users\crisedu10\source\repos\UTN\PP_Escaner_PinedaAgustinRoman\Entidades\bin\Debug\net7.0\Entidades.pdb
+C:\Users\crisedu10\source\repos\UTN\PP_Escaner_PinedaAgustinRoman\Entidades\obj\Debug\net7.0\Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\crisedu10\source\repos\UTN\PP_Escaner_PinedaAgustinRoman\Entidades\obj\Debug\net7.0\Entidades.AssemblyInfoInputs.cache
+C:\Users\crisedu10\source\repos\UTN\PP_Escaner_PinedaAgustinRoman\Entidades\obj\Debug\net7.0\Entidades.AssemblyInfo.cs
+C:\Users\crisedu10\source\repos\UTN\PP_Escaner_PinedaAgustinRoman\Entidades\obj\Debug\net7.0\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\crisedu10\source\repos\UTN\PP_Escaner_PinedaAgustinRoman\Entidades\obj\Debug\net7.0\Entidades.dll
+C:\Users\crisedu10\source\repos\UTN\PP_Escaner_PinedaAgustinRoman\Entidades\obj\Debug\net7.0\refint\Entidades.dll
+C:\Users\crisedu10\source\repos\UTN\PP_Escaner_PinedaAgustinRoman\Entidades\obj\Debug\net7.0\Entidades.pdb
+C:\Users\crisedu10\source\repos\UTN\PP_Escaner_PinedaAgustinRoman\Entidades\obj\Debug\net7.0\ref\Entidades.dll
