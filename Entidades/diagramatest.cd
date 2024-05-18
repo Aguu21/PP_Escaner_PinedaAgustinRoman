@@ -40,9 +40,9 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Entidades.Informes">
-    <Position X="10.5" Y="0.5" Width="1.5" />
+    <Position X="10.5" Y="0.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAQAAEAAAEAAAAAAAAAAIA=</HashCode>
       <FileName>Informes.cs</FileName>
     </TypeIdentifier>
   </Class>

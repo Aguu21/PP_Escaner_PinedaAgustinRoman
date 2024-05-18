@@ -49,10 +49,8 @@ namespace Entidades
         {
             StringBuilder text = new StringBuilder();
             text.Append(base.ToString());
-            //Encuentra la posición de los caracteres "Cód. de barras:"
-            //para ubicar una nueva linea en esa posición.
+            
             int index = 0;
-
             for(int i = 0; i < 3; i++)
             {
                 index = text.ToString().IndexOf("\n", index + 1);

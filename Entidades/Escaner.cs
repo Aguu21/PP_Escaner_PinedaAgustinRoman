@@ -55,7 +55,7 @@ namespace Entidades
         public bool CambiarEstadoDocumento(Documento d)
         {
 
-            foreach (Documento documento in this.ListaDocumentos)
+            foreach (Documento documento in ListaDocumentos)
             {
                 if (d == documento)
                 {
@@ -84,11 +84,16 @@ namespace Entidades
 
         public static bool operator +(Escaner e, Documento d)
         {
-            if((e != d) && (d.Estado == Documento.Paso.Inicio))
+            if (e.locacion == Departamento.mapoteca && d is Mapa ||
+                e.locacion == Departamento.procesosTecnicos && d is Libro)
             {
-                e.CambiarEstadoDocumento(d);
-                e.ListaDocumentos.Add(d);
-                return true;
+                if ((e != d) && (d.Estado == Documento.Paso.Inicio))
+                {
+                    d.AvanzarEstado();
+                    e.ListaDocumentos.Add(d);
+                    return true;
+                }
+                return false;
             }
             return false;
         }
