@@ -8,14 +8,14 @@ namespace Entidades
 {
     public class Escaner
     {
-        List<Documento> listaDocuemntos;
+        List<Documento> listaDocumentos;
         Departamento locacion;
         string marca;
         TipoDoc tipo;
 
         public List<Documento> ListaDocumentos
         {
-            get => this.listaDocuemntos;
+            get => this.listaDocumentos;
         }
         public Departamento Locacion
         {
@@ -36,7 +36,7 @@ namespace Entidades
         {
             this.marca = marca;
             this.tipo = tipo;
-            this.listaDocuemntos = new List<Documento>();
+            this.listaDocumentos = new List<Documento>();
 
             if(tipo == TipoDoc.mapa)
             {
@@ -50,6 +50,47 @@ namespace Entidades
             {
                 this.locacion = Departamento.nulo;
             }
+        }
+
+        public bool CambiarEstadoDocumento(Documento d)
+        {
+
+            foreach (Documento documento in this.ListaDocumentos)
+            {
+                if (d == documento)
+                {
+                    return documento.AvanzarEstado();
+                }
+            }
+            return false;
+        }
+
+        public static bool operator ==(Escaner e, Documento d)
+        {
+            foreach (Documento documento in e.ListaDocumentos)
+            {
+                if (d == documento)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public static bool operator !=(Escaner e, Documento d)
+        {
+            return !(e == d);
+        }
+
+        public static bool operator +(Escaner e, Documento d)
+        {
+            if((e != d) && (d.Estado == Documento.Paso.Inicio))
+            {
+                e.CambiarEstadoDocumento(d);
+                e.ListaDocumentos.Add(d);
+                return true;
+            }
+            return false;
         }
 
         public enum Departamento

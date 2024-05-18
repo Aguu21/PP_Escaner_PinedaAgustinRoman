@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -20,8 +21,8 @@ namespace Entidades
             get => this.NumNormalizado;
         }
         public Libro(string titulo, string autor, int anio,
-            string numNormalizado, string barcode, int numPaginas)
-            : base(titulo, autor, anio, numNormalizado, barcode)
+            string numNormalizado, string codebar, int numPaginas)
+            : base(titulo, autor, anio, numNormalizado, codebar)
         {
             this.numPaginas = numPaginas;
         }
@@ -48,8 +49,18 @@ namespace Entidades
         {
             StringBuilder text = new StringBuilder();
             text.Append(base.ToString());
-            text.AppendLine($"ISBN: {this.ISBN}");
-            text.AppendLine($"Cód. de barras: {this.Barcode}");
+            //Encuentra la posición de los caracteres "Cód. de barras:"
+            //para ubicar una nueva linea en esa posición.
+            int index = 0;
+
+            for(int i = 0; i < 3; i++)
+            {
+                index = text.ToString().IndexOf("\n", index + 1);
+            }
+            text.Insert(index + 1, $"ISBN: {this.ISBN} \n");
+
+            //text.Insert(text.ToString().IndexOf(text.ToString().IndexOf("Cód. de barras:")),
+            //$"ISBN: {this.ISBN}\n");
             text.AppendLine($"Número de Páginas: {this.NumPaginas}.");
             return text.ToString();
         }

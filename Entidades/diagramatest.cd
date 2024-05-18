@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Entidades.Documento">
-    <Position X="6.25" Y="0.5" Width="1.75" />
+    <Position X="3.5" Y="0.5" Width="1.75" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
@@ -17,14 +17,29 @@
       <FileName>Documento.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Entidades.Escaner" Collapsed="true">
-    <Position X="8.75" Y="0.5" Width="1.5" />
+  <Class Name="Entidades.Escaner">
+    <Position X="8" Y="0.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Entidades.Escaner.Departamento">
+        <TypeIdentifier>
+          <NewMemberFileName>Escaner.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Entidades.Escaner.TipoDoc">
+        <TypeIdentifier>
+          <NewMemberFileName>Escaner.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAABBAAAAAQAAAAQAAAAAAABAACAAAAAgBAAAAAQiQ=</HashCode>
       <FileName>Escaner.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Entidades.Informes" Collapsed="true">
+  <Class Name="Entidades.Informes">
     <Position X="10.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -32,22 +47,18 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Entidades.Libro">
-    <Position X="4.5" Y="1.5" Width="1.5" />
+    <Position X="1.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAABAAAQAAAAAEAAAAABAAAAAAAAAAAAAAAAAAAiA=</HashCode>
       <FileName>Libro.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Entidades.Mapa" Collapsed="true">
-    <Position X="8.75" Y="1.5" Width="1.5" />
+  <Class Name="Entidades.Mapa">
+    <Position X="6" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AQAAEAEAAAAAAAAEAAAAAAABAAAAAQAAAAAAAAAAAiA=</HashCode>
       <FileName>Mapa.cs</FileName>
     </TypeIdentifier>
-  </Class>
-  <Class Name="System.Object" Collapsed="true">
-    <Position X="9.75" Y="6.75" Width="1.5" />
-    <TypeIdentifier />
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

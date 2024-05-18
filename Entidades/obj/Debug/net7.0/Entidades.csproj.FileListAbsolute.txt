@@ -9,3 +9,4 @@ C:\Users\crisedu10\source\repos\UTN\PP_Escaner_PinedaAgustinRoman\Entidades\obj\
 C:\Users\crisedu10\source\repos\UTN\PP_Escaner_PinedaAgustinRoman\Entidades\obj\Debug\net7.0\refint\Entidades.dll
 C:\Users\crisedu10\source\repos\UTN\PP_Escaner_PinedaAgustinRoman\Entidades\obj\Debug\net7.0\Entidades.pdb
 C:\Users\crisedu10\source\repos\UTN\PP_Escaner_PinedaAgustinRoman\Entidades\obj\Debug\net7.0\ref\Entidades.dll
+C:\Users\crisedu10\source\repos\UTN\PP_Escaner_PinedaAgustinRoman\Entidades\obj\Debug\net7.0\Entidades.sourcelink.json

@@ -64,6 +64,7 @@
             text.AppendLine($"Titulo: {this.Titulo}");
             text.AppendLine($"Autor: {this.Autor}");
             text.AppendLine($"Año: {this.Anio}");
+            text.AppendLine($"Cód. de barras: {this.Barcode}");
             return text.ToString();
         }
 

@@ -23,8 +23,8 @@ namespace Entidades
         {
             get => this.ancho * this.alto;
         }
-        public Mapa(string titulo, string autor, int anio, string numNormalizado, string barcode, int alto, int ancho)
-            : base(titulo, autor, anio, numNormalizado, barcode)
+        public Mapa(string titulo, string autor, int anio, string numNormalizado, string codebar, int alto, int ancho)
+            : base(titulo, autor, anio, numNormalizado, codebar)
         {
             this.alto = alto;
             this.ancho = ancho;
@@ -52,7 +52,6 @@ namespace Entidades
         {
             StringBuilder text = new StringBuilder();
             text.Append(base.ToString());
-            text.AppendLine($"Cód. de barras: {this.Barcode}");
             text.AppendLine($"Superficie: {this.Alto} * {this.Ancho} = {this.Superficie} cm2.");
             return text.ToString();
         }
