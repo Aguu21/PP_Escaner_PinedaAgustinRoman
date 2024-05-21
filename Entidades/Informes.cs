@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 namespace Entidades
-{
+{ 
+    //Entrega información de los Escaneres y sus Documentos.
     public static class Informes
     {
+        //Trae la información de los Documentos en estado Distribuidos.
         public static void MostrarDistribuidos(Escaner e,
             out int extension, out int cantidad, out string resumen)
         {
@@ -16,33 +13,38 @@ namespace Entidades
                 out extension, out cantidad, out resumen);
         }
 
-        private static void MostrarDocumentosPorEstado(Escaner e, Documento.Paso estado,
-            out int extension, out int cantidad, out string resumen)
+
+        //Recopila la extensión, la cantidad y un resumen dado un Estado
+        //sobre la ListaDocumentos.
+        private static void MostrarDocumentosPorEstado(Escaner e, 
+            Documento.Paso estado, out int extension, out int cantidad, 
+            out string resumen)
         {
             extension = 0;
             cantidad = 0;
-            
             StringBuilder text = new StringBuilder();
-            foreach (Documento documento in e.ListaDocumentos)
+
+            foreach (Documento d in e.ListaDocumentos)
             {
-                if (documento.Estado == estado)
+                if (d.Estado == estado)
                 {
-                    if(documento is Libro l)
+                    if(d is Libro l)
                     {
                         extension += l.NumPaginas;
                     }
-                    else if (documento is Mapa m)
+                    else if (d is Mapa m)
                     {
                         extension += m.Superficie;    
                     }
                     cantidad++;
-                    text.AppendLine(documento.ToString());
+                    text.AppendLine(d.ToString() + "\n");
                 }
             }
-
-            resumen = text.ToString();
+            resumen = text.ToString()[..^1];
         }
 
+
+        //Trae la información de los Documentos en estado EnEscaner.
         public static void MostrarEnEscaner(Escaner e,
             out int extension, out int cantidad, out string resumen)
         {
@@ -50,6 +52,8 @@ namespace Entidades
                 out extension, out cantidad, out resumen);
         }
 
+
+        //Trae la información de los Documentos en estado EnRevisión.
         public static void MostrarEnRevisión(Escaner e,
             out int extension, out int cantidad, out string resumen)
         {
@@ -57,6 +61,8 @@ namespace Entidades
                 out extension, out cantidad, out resumen);
         }
 
+
+        //Trae la información de los Documentos en estado Terminado.
         public static void MostrarTerminados(Escaner e, 
             out int extension, out int cantidad, out string resumen)
         {

@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Entidades
-{
+﻿namespace Entidades
+{ 
+    //Recopila aquellos Documentos a escanear y los escanea.
     public class Escaner
     {
         List<Documento> listaDocumentos;
@@ -13,24 +8,30 @@ namespace Entidades
         string marca;
         TipoDoc tipo;
 
+
         public List<Documento> ListaDocumentos
         {
             get => this.listaDocumentos;
         }
+
+
         public Departamento Locacion
         {
             get => this.locacion;
         }
+
 
         public string Marca
         {
             get => this.marca;
         }
 
+
         public TipoDoc Tipo
         {
             get => this.tipo;
         }
+
 
         public Escaner(string marca, TipoDoc tipo)
         {
@@ -38,19 +39,12 @@ namespace Entidades
             this.tipo = tipo;
             this.listaDocumentos = new List<Documento>();
 
-            if(tipo == TipoDoc.mapa)
-            {
-                this.locacion = Departamento.mapoteca;
-            }
-            else if(tipo == TipoDoc.libro)
-            {
-                this.locacion = Departamento.procesosTecnicos;
-            }
-            else
-            {
-                this.locacion = Departamento.nulo;
-            }
+            //Dado el tipo de Documento a escanear, la locacion varia.
+            this.locacion = (tipo == TipoDoc.mapa) ? Departamento.mapoteca :
+                 (tipo == TipoDoc.libro) ? Departamento.procesosTecnicos :
+                 Departamento.nulo;
         }
+
 
         public bool CambiarEstadoDocumento(Documento d)
         {
@@ -65,6 +59,8 @@ namespace Entidades
             return false;
         }
 
+
+        //Dada la lista del escaner, se chequea si existe una copia.
         public static bool operator ==(Escaner e, Documento d)
         {
             foreach (Documento documento in e.ListaDocumentos)
@@ -77,15 +73,18 @@ namespace Entidades
             return false;
         }
 
+
         public static bool operator !=(Escaner e, Documento d)
         {
             return !(e == d);
         }
 
+
+        //Añade un documento a ListaDocumentos segun corresponda.
         public static bool operator +(Escaner e, Documento d)
         {
-            if (e.locacion == Departamento.mapoteca && d is Mapa ||
-                e.locacion == Departamento.procesosTecnicos && d is Libro)
+            if (e.Tipo == TipoDoc.mapa && d is Mapa ||
+                e.Tipo == TipoDoc.libro && d is Libro)
             {
                 if ((e != d) && (d.Estado == Documento.Paso.Inicio))
                 {
@@ -93,10 +92,10 @@ namespace Entidades
                     e.ListaDocumentos.Add(d);
                     return true;
                 }
-                return false;
             }
             return false;
         }
+
 
         public enum Departamento
         {
@@ -104,6 +103,8 @@ namespace Entidades
             mapoteca,
             procesosTecnicos
         }
+
+
         public enum TipoDoc
         {
             libro,
