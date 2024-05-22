@@ -40,8 +40,8 @@
             this.listaDocumentos = new List<Documento>();
 
             //Dado el tipo de Documento a escanear, la locacion varia.
-            this.locacion = (tipo == TipoDoc.mapa) ? Departamento.mapoteca :
-                 (tipo == TipoDoc.libro) ? Departamento.procesosTecnicos :
+            this.locacion = (this.Tipo == TipoDoc.mapa) ? Departamento.mapoteca :
+                 (this.Tipo == TipoDoc.libro) ? Departamento.procesosTecnicos :
                  Departamento.nulo;
         }
 
