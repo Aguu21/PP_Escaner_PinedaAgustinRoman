@@ -30,8 +30,8 @@ namespace Entidades
             string numNormalizado, string codebar, int ancho, int alto)
             : base(titulo, autor, anio, numNormalizado, codebar)
         {
-            this.ancho = ancho;
-            this.alto = alto;
+            this.ancho = (ancho < 1) ? 1 : ancho;
+            this.alto = (alto < 1) ? 1 : alto;
         }
 
 

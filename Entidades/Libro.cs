@@ -23,7 +23,7 @@ namespace Entidades
             string numNormalizado, string codebar, int numPaginas)
             : base(titulo, autor, anio, numNormalizado, codebar)
         {
-            this.numPaginas = numPaginas;
+            this.numPaginas = (numPaginas < 1) ? 1 : numPaginas; ;
         }
 
 

@@ -54,7 +54,7 @@ namespace Entidades
         {
             this.titulo = titulo;
             this.autor = autor;
-            this.anio = anio;
+            this.anio = (anio < 0) ? 0 : anio;
             this.numNormalizado = numNormalizado;
             this.barcode = barcode;
             this.estado = Paso.Inicio;
