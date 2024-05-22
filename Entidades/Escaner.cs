@@ -65,10 +65,22 @@
         {
             foreach (Documento documento in e.ListaDocumentos)
             {
-                if (d == documento)
+                if (documento is Libro l && d is Libro libro)
                 {
-                    return true;
+                    if (l == libro)
+                    {
+                        return true;
+                    }
                 }
+                else if (documento is Mapa m && d is Mapa mapa)
+                {
+                    if (m == mapa)
+                    {
+                        return true;
+                    }
+                }
+
+
             }
             return false;
         }

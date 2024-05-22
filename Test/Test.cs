@@ -1,4 +1,5 @@
 ﻿using Entidades;
+
 namespace Test
 {
     internal class Program
@@ -10,7 +11,7 @@ namespace Test
             Libro l1 = new Libro("Yerma", "García Lorca, Federico", 1995, "11111", "22222", 100);
             Libro l2 = new Libro("Bodas de sangre", "García Lorca, Federico", 1997, "11112", "22223", 200);
             // Barcode repetido
-            Libro l3 = new Libro("Codebar repetido", "García Lorca, Federico",2003, "11113", "22222", 3);
+            Libro l3 = new Libro("Codebar repetido", "García Lorca, Federico", 2003, "11113", "22222", 3);
             // ISBN repetido
             Libro l4 = new Libro("ISBN repetido", "García Lorca, Federico", 2003, "11112", "22224", 2);
             // Título-autor repetido
@@ -32,32 +33,32 @@ namespace Test
             Escaner m = new Escaner("HP", Escaner.TipoDoc.mapa);
 
             bool pudo = l + l1;
-                 pudo = l + l2;
-                 pudo = l + l3;
-                 pudo = l + l4;
-                 pudo = l + l5;
-                 pudo = m + m1;
-                 pudo = m + m2;
-                 pudo = m + m3;
-                 pudo = m + m4;
-                 pudo = m + m5;
-                 pudo = m + m6;
-                 pudo = m + l1;
-                 pudo = l + m1;
+            pudo = l + l2;
+            pudo = l + l3;
+            pudo = l + l4;
+            pudo = l + l5;
+            pudo = m + m1;
+            pudo = m + m2;
+            pudo = m + m3;
+            pudo = m + m4;
+            pudo = m + m5;
+            pudo = m + m6;
+            pudo = m + l1;
+            pudo = l + m1;
 
-            l1.AvanzarEstado(); 
-            l1.AvanzarEstado(); 
+            l1.AvanzarEstado();
+            l1.AvanzarEstado();
             l2.AvanzarEstado();
-            l2.AvanzarEstado(); 
-            m2.AvanzarEstado(); 
+            l2.AvanzarEstado();
+            m2.AvanzarEstado();
             m3.AvanzarEstado();
             m3.AvanzarEstado();
-            m3.AvanzarEstado(); 
+            m3.AvanzarEstado();
             m4.AvanzarEstado();
             m4.AvanzarEstado();
             m4.AvanzarEstado();
             m4.AvanzarEstado();
-            m4.AvanzarEstado(); 
+            m4.AvanzarEstado();
 
             Informes.MostrarDistribuidos(l, out int extensionLibroDistr, out int cantidadLibroDistr, out string resumenLibroDistr);
             Informes.MostrarEnEscaner(l, out int extensionLibroEnEsc, out int cantidadLibroEnEsc, out string resumenLibroEnEsc);
