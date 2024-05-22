@@ -40,7 +40,7 @@ namespace Entidades
                     text.AppendLine(d.ToString() + "\n");
                 }
             }
-            resumen = text.ToString()[..^1];
+            resumen = text.ToString();
         }
 
 
@@ -54,7 +54,7 @@ namespace Entidades
 
 
         //Trae la información de los Documentos en estado EnRevisión.
-        public static void MostrarEnRevisión(Escaner e,
+        public static void MostrarEnRevision(Escaner e,
             out int extension, out int cantidad, out string resumen)
         {
             MostrarDocumentosPorEstado(e, Documento.Paso.EnRevision,
