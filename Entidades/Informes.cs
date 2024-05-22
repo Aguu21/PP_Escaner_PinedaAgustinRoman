@@ -37,7 +37,7 @@ namespace Entidades
                         extension += m.Superficie;    
                     }
                     cantidad++;
-                    text.AppendLine(d.ToString() + "\n");
+                    text.Append(d.ToString());
                 }
             }
             resumen = text.ToString();
