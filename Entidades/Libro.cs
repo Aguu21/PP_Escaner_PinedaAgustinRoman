@@ -57,9 +57,9 @@ namespace Entidades
             {
                 index = text.ToString().IndexOf("\n", index + 1);
             }
-            text.Insert(index + 1, $"ISBN: {this.ISBN} \n");
+            text.Insert(index + 1, $" ISBN: {this.ISBN} \n");
             
-            text.AppendLine($"Número de Páginas: {this.NumPaginas}.");
+            text.AppendLine($" Número de páginas: {this.NumPaginas}.");
 
             return text.ToString();
         }

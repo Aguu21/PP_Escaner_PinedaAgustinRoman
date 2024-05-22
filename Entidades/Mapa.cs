@@ -56,7 +56,7 @@ namespace Entidades
             StringBuilder text = new StringBuilder();
             text.Append(base.ToString());
 
-            text.Append($"Superficie: {this.Alto} * {this.Ancho} = {this.Superficie} cm2.");
+            text.Append($" Superficie: {this.Ancho} * {this.Alto} = {this.Superficie} cm2.");
             
             return text.ToString();
         }
