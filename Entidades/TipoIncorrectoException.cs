@@ -36,13 +36,15 @@ namespace Entidades
             this.nombreMetodo = nombreMetodo;
         }
 
+
         public override string ToString()
         {
             StringBuilder text = new StringBuilder();
-            string innerException = InnerException != null ? 
+            string innerException = InnerException != null ?
                 InnerException.Message : "N/A";
 
-            text.AppendLine($"- Excepción en el método {this.NombreMetodo} de la clase {this.NombreClase}.");
+            text.AppendLine($"- Excepción en el método {this.NombreMetodo}" +
+                $" de la clase {this.NombreClase}.");
             text.AppendLine($"- Algo salió mal, revisa los detalles.");
             text.AppendLine($"- Detalles: {innerException}.");
 

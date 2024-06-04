@@ -48,7 +48,8 @@ namespace Test
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex.ToString());
+                    string result = ex.InnerException != null ? ex.InnerException.ToString() : "No hay innerException";
+                    Console.WriteLine(result);
                 }
             }
             
