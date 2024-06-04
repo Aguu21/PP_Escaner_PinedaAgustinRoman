@@ -63,26 +63,33 @@
         //Dada la lista del escaner, se chequea si existe una copia.
         public static bool operator ==(Escaner e, Documento d)
         {
-            foreach (Documento documento in e.ListaDocumentos)
+            if (e.Tipo == TipoDoc.mapa && d is Mapa ||
+                    e.Tipo == TipoDoc.libro && d is Libro)
             {
-                if (documento is Libro l && d is Libro libro)
+                foreach (Documento documento in e.ListaDocumentos)
                 {
-                    if (l == libro)
+                    if (documento is Libro l && d is Libro libro)
                     {
-                        return true;
+                        if (l == libro)
+                        {
+                            return true;
+                        }
+                    }
+                    else if (documento is Mapa m && d is Mapa mapa)
+                    {
+                        if (m == mapa)
+                        {
+                            return true;
+                        }
                     }
                 }
-                else if (documento is Mapa m && d is Mapa mapa)
-                {
-                    if (m == mapa)
-                    {
-                        return true;
-                    }
-                }
-
-
+                return false;
             }
-            return false;
+            else
+            {
+                throw new TipoIncorrectoException(
+                    "Este escáner no acepta este tipo de documento", "Escaner", "==");
+            }
         }
 
 
@@ -95,17 +102,21 @@
         //Añade un documento a ListaDocumentos segun corresponda.
         public static bool operator +(Escaner e, Documento d)
         {
-            if (e.Tipo == TipoDoc.mapa && d is Mapa ||
-                e.Tipo == TipoDoc.libro && d is Libro)
-            {
+            try
+            {   
                 if ((e != d) && (d.Estado == Documento.Paso.Inicio))
                 {
                     d.AvanzarEstado();
                     e.ListaDocumentos.Add(d);
                     return true;
                 }
+               
+                return false;
             }
-            return false;
+            catch (TipoIncorrectoException ex)
+            {
+                throw new TipoIncorrectoException("El documento no se pudo añadir a la lista", "Escaner", "+", ex);
+            }
         }
 
 
