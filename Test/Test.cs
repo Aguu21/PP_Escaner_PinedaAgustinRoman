@@ -32,28 +32,28 @@ namespace Test
             Escaner l = new Escaner("HP", Escaner.TipoDoc.libro);
             Escaner m = new Escaner("HP", Escaner.TipoDoc.mapa);
 
+            bool pudo = l + l1;
+
             try
             {
-                bool pudo = l + m1;
+                pudo = l + m1;
             }
-            catch (Exception ex)
+            catch (TipoIncorrectoException ex)
             {
-                Console.WriteLine(ex.ToString());
+                Console.WriteLine(ex);
             }
             finally
             {
                 try
                 {
-                    bool pudo = m + l1;
+                    pudo = m + l1;
                 }
-                catch (Exception ex)
+                catch (TipoIncorrectoException ex)
                 {
                     string result = ex.InnerException != null ? ex.InnerException.ToString() : "No hay innerException";
                     Console.WriteLine(result);
                 }
             }
-            
-
         }
     }
 }

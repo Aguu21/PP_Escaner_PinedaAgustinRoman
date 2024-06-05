@@ -2,6 +2,8 @@
 
 namespace Entidades
 {
+    //Excepcion a mostrar cuando el tipo de Escaner
+    //no coincide con el tipo de Documento
     public class TipoIncorrectoException : Exception
     {
         string nombreClase;
@@ -44,7 +46,7 @@ namespace Entidades
                 InnerException.Message : "N/A";
 
             text.AppendLine($"- Excepción en el método {this.NombreMetodo}" +
-                $" de la clase {this.NombreClase}.");
+                            $" de la clase {this.NombreClase}.");
             text.AppendLine($"- Algo salió mal, revisa los detalles.");
             text.AppendLine($"- Detalles: {innerException}.");
 
